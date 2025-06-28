@@ -85,6 +85,33 @@ html, body{
     border-top: 10px solid blue;
   }
 
+  @media (max-width: 768px) {
+    .chat {
+      top: 20vh;
+      right: 5vw;
+      font-size: 12px;
+      padding: 6px 14px;
+      rotate: 0deg;
+    }
+  
+    .chat::before {
+      left: 20px;
+      border-top: 8px solid #5c9e82;
+    }
+  
+    .chat1 {
+      top: 18vh;
+      left: 5vw;
+      font-size: 12px;
+      padding: 6px 14px;
+      rotate: 0deg;
+    }
+  
+    .chat1::before {
+      left: 20px;
+      border-top: 8px solid blue;
+    }
+  }
   
   
   

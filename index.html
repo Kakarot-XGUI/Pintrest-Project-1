@@ -69,7 +69,7 @@
     <div class="heading w-[100%] h-[33vh] flex flex-col text-center items-center justify-center">
       <p class="a1 opacity-0 leading-none text-6xl overflow-hidden">A Place to display your <br> masterpiece.</p>
 
-      <img src="project-1.png" alt="" class="w-[150vh] absolute top-[28vh]">
+      <img src="project-1.png" alt="" class="img scale-0 w-[150vh] absolute top-[28vh]">
 
 
       <p class="a5 absolute font-black  bottom-[24vh]">Artists can display their masterpieces, and buyers can discover and
@@ -136,6 +136,9 @@ tl.from("ul li, ul div, .a4", {
   }
 })
 
+.to(".img", {
+  scale: 1
+}, "+=0.1")
 
 .set(".a1", { scale: 0 })
 .to(".a1", {

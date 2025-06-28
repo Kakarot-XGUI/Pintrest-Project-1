@@ -1,0 +1,90 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Michroma&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Play:wght@400;700&family=Poetsen+One&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tilt+Neon&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+html, body{
+    height: 100%;
+}
+
+
+.heading p{
+    font-family: "Winky", sans-serif;
+    font-weight: 400;
+  
+  }
+
+.image-trail{
+    position: fixed;
+    inset: 0;
+    height: 200px;
+    width: 200px;
+    rotate: -2deg;
+    border-radius: 10px;
+    object-fit: cover;
+    pointer-events: none;
+    border-radius: 30px;
+    opacity: 0;
+    z-index: 9999;
+}
+
+.chat {
+    position: absolute;
+    top: 35vh;
+    right: 39vh;
+    background-color: #5c9e82;
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 25px;
+    rotate: 10deg;
+    font-family: sans-serif;
+    font-size: 14px;
+    max-width: 200px;
+    overflow: visible; /* Let the tail show outside */
+  }
+  
+  .chat::before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 30px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #5c9e82;
+  }
+  
+  .chat1 {
+    position: absolute;
+    top: 33vh;
+    left: 60vh;
+    background-color: blue;
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 25px;
+    rotate: -8deg;
+    font-family: sans-serif;
+    font-size: 14px;
+    max-width: 200px;
+    overflow: visible; /* Let the tail show outside */
+  }
+  
+  .chat1::before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 30px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid blue;
+  }
+
+  
+  
+  

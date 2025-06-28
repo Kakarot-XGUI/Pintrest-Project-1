@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pintrest - Project 1 </title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+
+</head>
+
+<body class="font-sans bg-gray-100">
+
+  <div class="chat a3  opacity-0">@andrea</div>
+  <div class="chat1 a3 opacity-0">@Coplin</div>
+
+
+  <!-- Navigation -->
+  <nav class="relative top-0 w-full   z-50 " id="navbar">
+    <div class="container mx-auto px-1">
+      <div class="flex justify-between items-center py-4">
+        <div class="a4 flex items-center space-x-2">
+          <img src="1.png" alt="" class="w-[28px]">
+          <div>
+            <h1 class="text-xl font-bold text-gray-800">Pallet Ross</h1>
+
+          </div>
+        </div>
+
+        <button id="mobile-menu-btn" class="md:hidden text-gray-800">
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
+
+        <ul class="hidden md:flex space-x-8">
+          <li><a href="#" class=" transition-colors font-medium">Get Started</a></li>
+          <li><a href="#" class="text-black font-medium">Create Strategy</a></li>
+          <li><a href="#" class="text-black font-medium">Pricing</a></li>
+          <li><a href="#" class="text-black  transition-colors font-medium">Contact</a></li>
+          <li><a href="#" class="text-black transition-colors font-medium">Solution</a></li>
+          <li><a href="#" class="text-black transition-colors font-medium">E-Commerce</a></li>
+          <div class="w-[30px] h-[30px] rounded-full bg-white  overflow-hidden pl-[7px] pt-[3px]">
+            <i class="ri-user-line"></i>
+          </div>
+          <div class="w-[30px] h-[30px] rounded-full bg-white overflow-hidden pl-[7px] pt-[3px]">
+            <i class="ri-sun-line"></i>
+          </div>
+        </ul>
+      </div>
+
+      <ul id="mobile-menu" class="md:hidden hidden pb-4 space-y-4">
+        <li><a href="#" class=" transition-colors font-medium">Get Started</a></li>
+        <li><a href="#" class="text-black font-medium">Create Strategy</a></li>
+        <li><a href="#" class="text-black font-medium">Pricing</a></li>
+        <li><a href="#" class="text-black  transition-colors font-medium">Contact</a></li>
+        <li><a href="#" class="text-black transition-colors font-medium">Solution</a></li>
+        <li><a href="#" class="text-black transition-colors font-medium">E-Commerce</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <div id="container" class="desktop-only hidden md:block w-full h-full relative">
+    <div class="heading w-[100%] h-[33vh] flex flex-col text-center items-center justify-center">
+      <p class="a1 opacity-0 leading-none text-6xl overflow-hidden">A Place to display your <br> masterpiece.</p>
+
+      <img src="project-1.png" alt="" class="w-[150vh] absolute top-[28vh]">
+
+
+      <p class="a5 absolute font-black  bottom-[24vh]">Artists can display their masterpieces, and buyers can discover and
+        <br> purchase works that resonate with them</p>
+      <div class="flex mt-7 gap-4 absolute bottom-[14vh]">
+        <button class="text-white bg-black rounded-full p-3">Join for $9.99/m</button>
+        <button class="font-bold">Read more</button>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="mobile-only md:hidden h-auto p-4">
+    <!-- Header -->
+    <header class="text-center mb-8 pt-4">
+      <p class="leading-none text-3xl lg:text-7xl overflow-hidden">A Place to display your <br> masterpiece.</p>
+    </header>
+
+
+
+
+    <div class="text-center items-center font-semibold flex flex-col text-xs mb-8">
+      <p>Artists can display their masterpieces, and buyers can discover and purchase works that resonate with them</p>
+      <div class="flex mt-7 gap-4">
+        <button class=" text-white bg-black rounded-full p-3">Join for $9.99/m</button>
+        <button class=" font-bold">Read more</button>
+      </div>
+    </div>
+  </div>
+
+
+  
+
+
+
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js"></script>
+  <script>
+    const tl = gsap.timeline({ delay: 0.5 });
+
+
+tl.from("ul li, ul div, .a4", {
+  y: 30,
+  opacity: 0,
+  rotationX: 70,
+  transformOrigin: "top center",
+  duration: 0.6,             
+  ease: "expo.out",
+  stagger: {
+    each: 0.1,               
+    from: "start"
+  }
+})
+
+.to(".a3", {
+  y: 0,
+  opacity: 1,
+  duration: 0.9,             
+  ease: "bounce.out",
+  startAt: {
+    y: -200,
+    opacity: 0
+  }
+})
+
+
+.set(".a1", { scale: 0 })
+.to(".a1", {
+  opacity: 1,
+  scale: 1,
+  duration: 0.8              
+})
+
+
+.from(".a5", {
+  y: 60,
+  opacity: 0,
+  scale: 0.9,
+  filter: "blur(6px)",
+  duration: 0.9,             
+  ease: "power3.out"
+}, "+=0.2")
+
+
+.from(".flex button", {
+  y: -80,
+  opacity: 0,
+  duration: 0.8,             
+  ease: "bounce.out",
+  stagger: 0.18              
+}, "+=0.1");
+
+
+
+  </script>
+
+</body>
+
+</html>
